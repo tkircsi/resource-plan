@@ -52,4 +52,5 @@
 
 (defn -main [& args]
   (time (calc-pmap resources tasks))
+  (println "END")
 )
