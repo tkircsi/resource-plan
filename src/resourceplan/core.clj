@@ -45,7 +45,7 @@
 
 (defn calc-pmap [r t]
   (let [p (comb/permutations (keys t))
-        n (int (/ (count p) 4))
+        n (int (/ (count p) 8))
         parts (partition n n nil p)]
     (reduce set/union (pmap calc-f parts))
     ))
