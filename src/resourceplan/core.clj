@@ -15,7 +15,7 @@
             :p8 {:a 15 :b 22 :c 8}
             :p9 {:a 19 :b 45 :c 34}
             :p10 {:a 43 :b 22 :c 11}
-            ;:p11 {:a 10 :b 11 :c 12}
+            :p11 {:a 10 :b 11 :c 12}
             ;:p12 {:a 4 :b 8 :c 9}
             })
 
@@ -51,6 +51,6 @@
     ))
 
 (defn -main [& args]
-  (time (calc-pmap resources tasks))
+  (time (spit "result-set.txt" (str (calc-pmap resources tasks))))
   (println "END")
 )
